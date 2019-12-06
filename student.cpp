@@ -30,9 +30,11 @@ void student::addGrade(double grades)
 double student::getScore()
 {
     double score = 0;
+    double sum = 0;
     for(int i = 0; i <gradeList.size(); i++)
     {
-        score += gradeList[i];
+        sum += gradeList[i];
+        score = sum / gradeList.size();
     }
     return score;
 }
